@@ -4,11 +4,13 @@ var generateBtn = document.querySelector("#generate");
 // Variables for characters, special charcaters, & numbers.
 var characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-var specialCharacters = ['!', '@', '#', '$', '%', '&', '*', '+', '?']
+var uppercase = characters.map(letter => letter.toUpperCase);
 
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+var specialCharacters = ['!', '@', '#', '$', '%', '&', '*', '+', '?'];
 
-function getPrompts() {
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+function getCriteria() {
   var pwdLength = prompt('How many characters would you like the password to be?(Between 8 - 128)');
   var pwdLowercase = confirm('Would you like to include lowercase letters?');
   var pwdUppercase = confirm('Would you like to include uppercase letters?');
@@ -17,9 +19,11 @@ function getPrompts() {
 };
 
 
+
+
 // Write password to the #password input
 function writePassword() {
-  var password = getPrompts();
+  var password = getCriteria();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
