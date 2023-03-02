@@ -3,15 +3,15 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function generatePassword() {
-  var pwdLength = prompt('How many characters would you like the password to be?')
+  var pwdLength = prompt('How many characters would you like the password to be?(Between 8 - 128)')
     console.log(pwdLength);
-  var pwdLowerCase = prompt('Would you like to include lowercase letters?')
-    console.log(pwdLowerCase);
-  var pwdUpperCase = prompt('Would you like to include uppercase letters?')
-    console.log(pwdUpperCase);
-  var pwdNumeric = prompt('Would you like to include numeric characters?')
+  var pwdLowercase = confirm('Would you like to include lowercase letters?')
+    console.log(pwdLowercase);
+  var pwdUppercase = confirm('Would you like to include uppercase letters?')
+    console.log(pwdUppercase);
+  var pwdNumeric = confirm('Would you like to include numeric characters?')
     console.log(pwdNumeric);
-  var pwdSpecial = prompt('Would you like to include special characters?')
+  var pwdSpecial = confirm('Would you like to include special characters?')
     console.log(pwdSpecial);
 };
 
